@@ -29,7 +29,9 @@ Year(Today) was implemented in the IF statement to derive the actual age of the 
 #### Calculated Measures
 
 Ratios and Percentages:
-created a column for sales margin % using the SUMX function.
+
+Created a column for sales margin % using the SUMX function.
 
 Aggregations:
+
 The total sales amount was calculated also using the SUMX function to get the Total Sales of all products.
