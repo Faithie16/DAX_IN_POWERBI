@@ -23,3 +23,6 @@ To get the Line Margin Percentage, the Line Margin was divided by the Line Amoun
 
 ![Line margin percentage](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Line%20margin%20percent%20created.jpg)
 
+## Calculated Measures
+
+To get the columns I wanted to work on, I selected Age, Line Margin% and Margin%  and inserted them in the column table marked in the red circle in the image below.
