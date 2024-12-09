@@ -48,4 +48,5 @@ I used the variable (VAR) function to calculate the Margin% to ensure the calcul
 ![Margin using Variable](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/margin%25%20using%20variable.jpg)
 
 VAR: Declares a variable and assigns it a value or expression.
+
 RETURN: Specifies the final calculation or result that uses the variable(s).
