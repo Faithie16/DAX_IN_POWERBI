@@ -17,9 +17,9 @@ I went further to create a column on the sales table that will contain the Unit 
 
 Further more, The Line Margin column was created mainly to derive the profit margin for each product. This feat was accomplished, using the BODMAS idea, by minusing the sales UNIT COST from NET PRICE and multiply by QUANTITY.
 
-![Line Margin] (https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/line%20margin%20created.jpg)
+![Line Margin](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/line%20margin%20created.jpg)
 
 To get the Line Margin Percentage, the Line Margin was divided by the Line Amount using the SUM function.
 
-![Line margin percentage]https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Line%20margin%20percent%20created.jpg)
+![Line margin percentage](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Line%20margin%20percent%20created.jpg)
 
