@@ -5,7 +5,7 @@ Project Case: Mastering DAX in Power Bi.
 I have completed an interesting project which explains how to use Power Bi, a data visualization and leading business intelligence tool, and Data Analysis Expression (DAX) to build hands-on expertise in creating interactive reports, dashboards and advanced analytics solutions.
 Here is a breakdown of the steps and techniques implemented in this project:
 
-###### Calculated Columns
+#### Calculated Columns
 
 Data Cleaning:
 Highlighted the date columns and changed the format to "Short date"
@@ -26,4 +26,4 @@ Divided the Line Margin by the Line Amount to derive the percentage profit on ea
 Time Intelligence:
 Year(Today) was implemented in the IF statement to derive the actual age of the customers from their birth date.
 
-###### Calculated Measures
+#### Calculated Measures
