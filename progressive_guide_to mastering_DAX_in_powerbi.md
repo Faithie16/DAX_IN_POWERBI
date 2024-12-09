@@ -26,3 +26,26 @@ To get the Line Margin Percentage, the Line Margin was divided by the Line Amoun
 ## Calculated Measures
 
 To get the columns I wanted to work on, I selected Age, Line Margin% and Margin%  and inserted them in the column table marked in the red circle in the image below.
+![Column](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/sales%20-%20Copy.jpg)
+
+All the columns selected appear on the white space.
+
+Moving on, we need to calculate the sales amount using the SUM function by creating a measure on the sales data.
+The function used to achieve this feat is as seen; 
+Sales Amount = SUM('Sales'[Line Amount])
+![Sales amount using sum function](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/sales.jpg)
+
+However, while perusing this data created, I realized the Margin% to be incorrect since the lowest percentage has to be 1% atleast.
+
+![Sales amount using SUMX](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/sales%20amount%20using%20SUMX.jpg)
+
+I went ahead to use SUMX function instead to get the correct and straightforward percentage value.
+
+Furthermore, In Power Bi, variables are a powerful feature in DAX (Data Analysis Expressions) that allow you to store and reuse values or expressions within a single DAX formula. Variables make your calculations more readable, efficient, and reusable.
+
+I used the variable (VAR) function to calculate the Margin% to ensure the calculations were correct from inception.
+
+![Margin using Variable](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/margin%25%20using%20variable.jpg)
+
+VAR: Declares a variable and assigns it a value or expression.
+RETURN: Specifies the final calculation or result that uses the variable(s).
