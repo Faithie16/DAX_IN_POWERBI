@@ -7,7 +7,7 @@ Before creating new columns, I noticed my data wasn't properly cleaned especiall
 After cleaning the data, I used the YEAR(TODAY()) statement in power bi to derive the actual age of customers for better analysis.
 
 I noticed some blank spaces in the birthdate column which returned "2024" as the customer's age, so I then included the IF statement in power bi to also return blank spaces in the age column using this function:
-Age = IF(ISBLANK('Customer'[Birth Date]), BLANK(), YEAR(TODAY()) - YEAR('Customer'[Birth Date]))
+        Age = IF(ISBLANK('Customer'[Birth Date]), BLANK(), YEAR(TODAY()) - YEAR('Customer'[Birth Date]))
 
 ![Age column](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Calculated%20age.jpg)
 
@@ -32,7 +32,7 @@ All the columns selected appear on the white space.
 
 Moving on, we need to calculate the sales amount using the SUM function by creating a measure on the sales data.
 The function used to achieve this feat is as seen; 
-Sales Amount = SUM('Sales'[Line Amount])
+        Sales Amount = SUM('Sales'[Line Amount])
 ![Sales amount using sum function](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/sales.jpg)
 
 However, while perusing this data created, I realized the Margin% to be incorrect since the lowest percentage has to be 1% atleast.
@@ -47,6 +47,6 @@ I used the variable (VAR) function to calculate the Margin% to ensure the calcul
 
 ![Margin using Variable](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/margin%25%20using%20variable.jpg)
 
-VAR: Declares a variable and assigns it a value or expression.
+        VAR: Declares a variable and assigns it a value or expression.
 
-RETURN: Specifies the final calculation or result that uses the variable(s).
+        RETURN: Specifies the final calculation or result that uses the variable(s).
