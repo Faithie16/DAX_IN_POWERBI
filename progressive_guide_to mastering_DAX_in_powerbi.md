@@ -53,3 +53,11 @@ I used the variable (VAR) function to calculate the Margin% to ensure the calcul
         VAR: Declares a variable and assigns it a value or expression.
 
         RETURN: Specifies the final calculation or result that uses the variable(s).
+
+## Calculated Tables
+
+Just as calculated columns returns a column, Calculated tables returns a table.
+
+To carry out this function, I created a copy of the data I want to use by using this function:
+
+        copy of product = 'Product'
