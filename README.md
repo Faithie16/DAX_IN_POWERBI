@@ -33,3 +33,13 @@ Here is a breakdown of the steps and techniques implemented in this project:
 
         Aggregations:
         The total sales amount was calculated also using the SUMX function to get the Total Sales of all products.
+
+#### Calculated Tables
+
+        New tables are created by clicking on the modeling tab in the Powerbi ribbon then enter the formula to define the table. In this case, I copied the content of another data into the new table I created.
+
+        Filter function was used to filter a particular set of data I needed for my calculations.
+
+        SUMX function is used to sum an expression for each row, it iterates row by row and then sum up the results unlike the basic SUM function which adds up the values in a single columns. I used this function to derive the total sum of sales.
+
+        The ALL function was used to get sales for all data, ignoring all the filters originally applied in the data.
