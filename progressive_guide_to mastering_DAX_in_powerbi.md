@@ -58,6 +58,39 @@ I used the variable (VAR) function to calculate the Margin% to ensure the calcul
 
 Just as calculated columns returns a column, Calculated tables returns a table.
 
-To carry out this function, I created a copy of the data I want to use by using this function:
+To carry out this feature, I followed the step highlighted below and renamed the table "COPY OF PRODUCT" 
+                Click modeling  - > New table
+
+Using the copy function, every data in the original product table is copied into the new measure to avoid tampering with the original data.
 
         copy of product = 'Product'
+![Copyofproduct](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Copy%20of%20products.jpg)
+
+Another reason why the copy of product table was created is to determine the total sales of all "Red" products.
+To accomplished this, I firstly cleaned the date column in the "Copyofproduct" data by selecting the date column and changing the format to short date.
+![Before cleaning the date column](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Filter%20product%20color%20to%20Red%20only.jpg)
+
+The image above shows the date format before cleaning the column, while the image below shows the result after cleaning the column.
+![After cleaning the date column](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Cleaned%20date%20column.jpg)
+
+The next step is to filter product color to "Red" only, remembe we only need the total sales for red products only. This was achieved using by combining the COPY FUNCTION and the FILTER FUNCTION, as shown below;
+        Copy of Product = FILTER('Product', 'Product'[Color] = "Red")
+
+![Filtered table](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/Filter%20product%20color%20to%20Red%20only.jpg)
+
+After filtering the color, to get the total sales for the red products, switch to model view to create a new measure.
+To create a new measure; select the sales data and right click to select "New Measure" from the dropdown menu provided then I renamed the measure "RED SALES".
+I combined the SUMX, FILTER and RELATED function to derive the total sales of all red products. This was achieved using this formula;
+        Red sales = SUMX(FILTER('Sales',RELATED('Product'[color]) = "Red"), 'Sales' [Quantity] * 'Sales'[Net Price])
+
+        The RELATED function works with relationships between tables in a data model, it is used when there is a one to many or one to one relationship between tables. 
+
+The outcome of the combined functions are shown in the image below.
+![Combined functions to get sales](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/sum%20of%20red%20sales.jpg)
+
+Furthermore, the ALL function was introduced. The ALL function ignores all filter and returns the complete data. 
+To achieve this, a new measure was first created and renamed "All Sales amount", also including the SUMX function to derive the total sales of all product. The formula is shown below;
+
+        All Sales amount = SUMX(ALL('sales'), 'sales' [quantity] * 'Sales' [Net Price])
+
+![ALL function](https://github.com/Faithie16/DAX_IN_POWERBI/blob/main/INtro%20to%20DAX%20imgs/All%20sales%20amount.jpg)
